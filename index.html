@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TRON</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4CAF50">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>TRON</h1>
+  <!-- Imagen de la cabeza de la serpiente (cambiar src por tu imagen) -->
+  <img id="headImage" src="motito.png" style="display: none;">
+  <canvas id="game" width="300" height="300"></canvas>
+  <p>Puntaje: <span id="score">0</span></p>
+
+  <div id="controls">
+    <div id="arrows">
+      <button id="up" class="arrow-btn up-btn">▲</button>
+      <div class="row">
+        <button id="left" class="arrow-btn left-btn">◀</button>
+        <button id="down" class="arrow-btn down-btn">▼</button>
+        <button id="right" class="arrow-btn right-btn">▶</button>
+      </div>
+    </div>
+    <div id="action-buttons">
+      <button id="pause" class="action-btn pause-btn">Pausar</button>
+      <button id="restart" class="action-btn restart-btn">Reiniciar</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>

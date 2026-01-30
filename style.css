@@ -1,0 +1,117 @@
+body {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  /* Fondo con imagen 'ciudad_tron' — coloca ciudad_tron.png junto a index.html */
+  background: #0a0e27 url("ciudad_tron.jpg") center/cover no-repeat;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+h1 {
+  color: #0080ff;
+  text-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+canvas {
+  background: #000;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 20px #00ffff, inset 0 0 20px rgba(0, 255, 255, 0.2);
+  margin: 20px 0;
+}
+
+p {
+  color: #00ffff;
+  font-size: 1.2em;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+#controls {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+#arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#arrows .row {
+  display: flex;
+  gap: 10px;
+}
+
+.arrow-btn {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  background: #0080ff;
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.1s;
+  box-shadow: 0 0 10px #0080ff, inset 0 0 10px rgba(0, 255, 255, 0.3);
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.arrow-btn:hover {
+  background: #00ffff;
+  color: #0080ff;
+  box-shadow: 0 0 20px #00ffff, inset 0 0 20px rgba(0, 128, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.arrow-btn:active {
+  transform: scale(0.95);
+}
+
+#action-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #ff0000;
+  color: #fff;
+  border: 2px solid #ff00ff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+  min-width: 100px;
+  box-shadow: 0 0 15px #ff0080, inset 0 0 10px rgba(255, 0, 128, 0.3);
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+.action-btn:hover {
+  background: #ff00ff;
+  box-shadow: 0 0 30px #ff00ff, inset 0 0 20px rgba(255, 0, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.action-btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 500px) {
+  .arrow-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+  
+  .action-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
